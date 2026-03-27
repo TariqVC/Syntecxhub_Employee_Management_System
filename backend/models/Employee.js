@@ -17,7 +17,7 @@ const employeeSchema = new mongoose.Schema({
   role: {
     type: String,
     required: [true, 'Role is required'],
-    enum: ['Developer', 'Designer', 'Manager', 'HR', 'Sales', 'Other'],
+    set: (val) => val.trim().toLowerCase().replace(/\b\w/g, c => c.toUpperCase()),
   },
   department: {
     type: String,
