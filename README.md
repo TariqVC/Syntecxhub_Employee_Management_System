@@ -81,8 +81,8 @@ npm install
 Create a `.env` file inside the `backend/` folder:
 
 ```env
-MONGO_URI=mongodb://localhost:27017/employeeDB
-PORT=5000
+MONGO_URI="your_own_connect_link"
+PORT="examples 5000"
 ```
 
 Start the backend server:
