@@ -23,6 +23,7 @@ const employeeSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Department is required'],
     trim: true,
+    set: (val) => val.trim().toLowerCase().replace(/\b\w/g, c => c.toLowerCase()),
   },
   salary: {
     type: Number,
